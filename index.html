@@ -36,7 +36,7 @@
     <script>
       async function rollDice() {
         const sides = document.getElementById('sidesInput').value;
-        const response = await fetch(`/api/roll-dice?sides=${sides}`);
+        const response = await fetch(`https://dice-roller-nodejs-sa-egdtbtewhfa4bubs.centralus-01.azurewebsites.net//api/roll-dice?sides=${sides}`);
         const data = await response.json();
         document.getElementById('result').textContent = `You rolled a ${data.result}`;
       }
